@@ -1,0 +1,30 @@
+pregunta6:
+respuesta:
+
+{
+  "name": "semana4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
+
+const express = require('express');
+const app = express();
+const puerto = 3000;
+
+app.get('/', (req, res) => {
+  res.send('¡Hola! Servidor Express funcionando 🚀');
+});
+
+app.listen(puerto, () => {
+  console.log(`Servidor en http://localhost:${puerto}`);
+});
